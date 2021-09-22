@@ -37,18 +37,20 @@ p{
     line-height: 1.7;
 }
 .container {
-    padding: 100px 50px;
+    padding: 50px 30px;
 }
 .heading {
     text-align: center;
 }
 .heading  h3 {
     position: relative;
-    font-size: 55px;
+    font-size: 35px;
     font-weight: 600;
     color: var(--green);
 }
-
+.heading  h1 {
+    color: var(--black);
+}
 /* .heading h1::before {
     content: "";
     position: absolute;
@@ -74,6 +76,7 @@ header {
     background-color: #fff;
     box-shadow: var(--box-shadow);
     z-index: 1000;
+    border-radius: 0px 0px 25px 25px;
 }
 header .logo {
     font-size: 28px;
@@ -202,7 +205,7 @@ header .icon #menu-bars {
     padding: 5px 15px;
     background-color: var(--black);
     color: white;
-    border-radius: 5px;
+    border-radius: 20px 0 20px 0;
 }
 .home .home-slider .slide .content a:hover {
     color: var(--green);
@@ -222,17 +225,16 @@ header .icon #menu-bars {
 }
 #dishes .container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 35px;
-
+    gap: 25px;
 }
 #dishes .container .box {
     position: relative;
-    padding: 10px;
+    padding: 15px;
     width: 300px;
-    min-height: 360px;
+    min-height: 400px;
     background-color: white;
     box-shadow: var(--box-shadow);
     border: 2px solid rgba(0,0,0,.2);
@@ -243,6 +245,7 @@ header .icon #menu-bars {
     top: 10px;
     width: 2rem;
     height: 2rem;
+    color: var(--green);
     background-color: #eee;
     border-radius: 50%;
     line-height: 2rem;
@@ -285,7 +288,7 @@ header .icon #menu-bars {
     font-size: 14px;
     background-color: var(--black);
     color: white;
-    border-radius: 5px;
+    border-radius: 20px 0 20px 0;
 }
 #dishes .container .box .btn:hover {
     color: var(--green);
@@ -339,7 +342,7 @@ header .icon #menu-bars {
     padding: 5px 15px;
     background-color: var(--black);
     color: white;
-    border-radius: 5px;
+    border-radius: 20px 0 20px 0;
 }
 .about-us .content a:hover {
     color: var(--green);
@@ -355,11 +358,12 @@ header .icon #menu-bars {
 .menu .container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     gap: 20px;
 }
 .menu .container .box {
-    flex-basis: 32%;
+    flex-basis: 30%;
     padding: 15px;
     background: white;
     border: 2px solid rgba(0,0,0,.2);
@@ -378,6 +382,7 @@ header .icon #menu-bars {
     right: 15px;
     width: 2rem;
     height: 2rem;
+    color: var(--green);
     background-color: #eee;
     border-radius: 50%;
     line-height: 2rem;
@@ -399,12 +404,14 @@ header .icon #menu-bars {
 }
 .menu .container .box .content a {
     margin-top: 5px;
+    padding: 20px;
     display: inline-block;
     width: fit-content;
-    padding: 5px 15px;
+    padding: 5px;
     background-color: var(--black);
     color: white;
-    border-radius: 5px; 
+    font-size: 14px;
+    border-radius: 20px 0 20px 0;
 }
 .menu .container .box .content a:hover {
     color: var(--green);
@@ -417,17 +424,184 @@ header .icon #menu-bars {
 }
 /* End menu */
 
+/* Start review */
 
+.review {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
 
+.review .container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    text-align: center;
+}
+.review .container .slide {
+    position: relative;
+    flex-basis: clac(90% / 4);
+    background-color: #eee;
+    padding: 20px;
+}
+.review .container .slide .fa-quote-right {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 25px;
+    color: var(--black);
+    opacity: 0.5;
+}
+.review .container .slide .user {
+    display: flex;
+    align-items: center;
+}
 
+.review .container .slide .user img{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+.review .container .slide .user .user-info h3 {
+    font-size: 18px;
+}
+.review .container .slide .user .user-info .stars {
+    color: var(--green);
+}
 
+/* End review */
 
+/* Start order */
+.order {
+    padding: 50px;
+    background-color: #eee;
+    overflow: hidden;
+}
+.order .container {
+    margin: 50px auto;
+    width: 800px auto;
+    background-color: white;
+    box-shadow: var(--box-shadow);
+}
+.order .container form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px 30px;
+    padding: 30px 0;
+}
+.order .container form .col-md {
+    flex-basis: 45%;
+}
+.order .container form .col-md label {
+    display: block;
+    color: var(--green);
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+.order .container form .col-md :is(input,textarea){
+    background-color: #eee;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+}
+.order .container form .col-md :is(input,textarea):focus {
+    outline:2px solid var(--green);
+    border-radius: 0;
+}
+.order .container form a {
+    margin-top: 5px;
+    display: inline-block;
+    width: fit-content;
+    padding: 5px 15px;
+    background-color: var(--black);
+    color: white;
+    border-radius: 20px 0 20px 0;
+}
+.order .container form a:hover {
+    color: var(--green);
+    letter-spacing: .5px;
+}
+/* End order */
 
+/* Start footer */
+footer {
+    padding-top: 50px 0;
+}
+footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+footer .container .box {
+    position: relative;
+    flex-basis: 20%;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+footer .container .box h3 {
+    font-size: 25px;
+}
+footer .container .box a {
+    color: #777;
+    padding: 5px 0;
+    position: relative;
+}
+footer .container .box a:hover {
+    color: var(--green);
+    letter-spacing: 2px;
+}
+footer .container .box a > i  {
+    font-size: 16px;
+    margin-right: 10px;
+    position: absolute;
+    top: 5px; left: -20px;
+    color: var(--green);
+    display: none;
+}
+footer .container .box a:hover > i {
+    display: inline;
+}
+footer .copyright {
+    background-color: #eee;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    color: var(--black);
+    border-top: 1px solid rgba(0,0,0,.2);
+}
+footer .copyright span {
+    color: var(--green);
+}
+/* End footer */
 
+/* Start scroll top */
+.up {
+    position: fixed;
+    bottom: 20px;
+    right: 12px;
+    background-color: var(--green);
+    font-weight: bold;
+    padding: 5px 10px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 0%;
+}
+.up.show {
+    opacity: 100%;
 
+}
+.up.show:hover {
+    background-color: slategray;
+    color: white;
+}
 
-
-
+/* End scroll top */
 
 
 
@@ -473,17 +647,22 @@ header .icon #menu-bars {
     .container {
         padding: 20px;
     }
-    
+    .review .container .slide .user {
+        flex-direction: column;
+    }
 }
 @media(max-width:768px){
+
     header .icon  #menu-bars{
         display: inline-block;
     }
 
     header .navbar {
         position: absolute;
-        top: 100%;
-        left: 0;
+        top: 50px;
+        width: 300px;
+        height: 750px;
+        left: -300px;
         right: 0;
         display: flex;
         flex-direction: column;
@@ -493,8 +672,10 @@ header .icon #menu-bars {
         border-top: .1rem solid rgba(0,0,0,.2);
         border-bottom: .1rem solid rgba(0,0,0,.2);
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        z-index: 1100;
     }
     header .navbar.active{
+        left: 0;
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     }
     header .navbar a {
@@ -507,6 +688,12 @@ header .icon #menu-bars {
     }
     .home .home-slider .slide .content {
         text-align: center;
+    }
+    #dishes .container {
+        padding: 15px;
+    }
+    #dishes .container .box {
+        width: 100%;
     }
     .about-us {
         padding: 25px;
@@ -525,6 +712,22 @@ header .icon #menu-bars {
     }
     .menu .container .box {
         flex-basis: 100%;
+    }
+    .order {
+        padding: 20px;
+    }
+    .order .container {
+        padding: 10px;
+    }
+    .order .container form .col-md {
+        flex-basis: 90%;
+    }
+    footer .container .box {
+        flex-basis: 40%;
+    }
+    footer .container .box a > i {
+        display: inline-block;
+        margin-right: 20px;
     }
 }
 /* End media Query */

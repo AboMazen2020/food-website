@@ -31,48 +31,35 @@ let close = document.querySelector("#close");
 
 // End Search
 
-// Start slider
 
-    
+function loader(){
+  document.querySelector('.loader-container').classList.add('fade-out');
+}
 
-var swiper = new Swiper(".home-slider", {
-    spaceBetween: 30,
-    centeredSlides: true,
-    autoplay: {
-      delay: 7500,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    loop:true,
-  });
-  
-  var swiper = new Swiper(".review-slider", {
-    spaceBetween: 20,
-    centeredSlides: true,
-    autoplay: {
-      delay: 7500,
-      disableOnInteraction: false,
-    },
-    loop:true,
-    breakpoints: {
-      0: {
-          slidesPerView: 1,
-      },
-      640: {
-        slidesPerView: 2,
-      },
-      768: {
-        slidesPerView: 2,
-      },
-      1024: {
-        slidesPerView: 3,
-      },
-    },
-  });
-  
+function fadeOut(){
+  setInterval(loader, 3000);
+}
+
+window.onload = fadeOut;
 
 
-// End slider
+// Start scroll top
+let span = document.querySelector(".up");
+
+window.onscroll = function () {
+
+     if (this.scrollY >= 1000) {
+      span.classList.add("show");
+     }else {
+         span.classList.remove("show");
+     }
+
+   // this.scrollY >= 1000 ? span.classList.add("show") : span.classList.remove("show");
+}
+
+span.onclick = function () {
+    window.scrollTo ({
+        top: 0,
+        behavior: "smooth",
+    });
+};
