@@ -31,16 +31,25 @@ let close = document.querySelector("#close");
 
 // End Search
 
+// Start login form
 
-function loader(){
-  document.querySelector('.loader-container').classList.add('fade-out');
-}
+let form = document.querySelector("#login-user");
 
-function fadeOut(){
-  setInterval(loader, 3000);
-}
+    form.onclick =  () => {
+        document.querySelector("#login-form").classList.toggle("active");
+ }
 
-window.onload = fadeOut;
+ let closed = document.querySelector("#close-form");
+
+ closed.onclick = () => {
+
+    document.querySelector("#login-form").classList.remove("active");
+ }
+
+
+
+
+// End login form
 
 
 // Start scroll top
