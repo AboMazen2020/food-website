@@ -64,6 +64,22 @@ clossedForm.onclick = () => {
 
 // End checkout
 
+// Start favorite 
+
+let favorite = document.querySelector("#favorite-click");
+
+    favorite.onclick = () => {
+        document.querySelector("#favorite").classList.toggle("active");
+    }
+
+let closeFav = document.getElementById("close-fav");
+
+    closeFav.onclick = () => {
+        document.querySelector("#favorite").classList.remove("active");
+    }
+
+// End favorite
+
 // Start scroll top
 let span = document.querySelector(".up");
 

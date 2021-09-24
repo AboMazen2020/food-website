@@ -160,7 +160,7 @@ header .icon #menu-bars {
     cursor: pointer;
     width: 40px;
     height: 40px;
-    line-height: 20px;
+    margin: 10px auto;
     padding: 10px;
     border-radius: 50%;
     background-color: var(--green);
@@ -175,7 +175,6 @@ header .icon #menu-bars {
     top: 20px;
     right: 20px;
     font-size: 25px;
-    line-height: 20px;
 }
 
 /* End Search */
@@ -369,6 +368,73 @@ padding: 20px 0;
     color: #DF4B3B;
 }
 /* End checkout */
+
+/* Start favorite */
+#favorite {
+    position: fixed;
+    top: 100px;
+    right: 75px;
+    width: 300px;
+    background-color: #eee;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    border: 2px solid rgba(0,0,0,.2);
+    box-shadow: var(--box-shadow);
+    z-index: 100;
+    opacity: 0%; 
+}
+#favorite::before {
+    content: "";
+    position: absolute;
+    top: -17px;
+    right: 40px;
+    border: 15px solid #eee;
+    transform: rotate(45deg);
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+}
+#favorite.active {
+    opacity: 100%;
+}
+#favorite .broduct {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 5px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid rgba(0,0,0,.2);
+}
+#favorite .broduct img {
+    width: 70px;
+    height: 70px;
+}
+#favorite .broduct h5 {
+    color: var(--green) !important;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    color: var(--black);
+}
+#favorite .broduct p {
+    font-size: 16px;
+}
+#favorite .broduct .fas {
+    color: #DF4B3B;
+    cursor: pointer;
+}
+
+#close-fav {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+#close-fav:hover {
+    color: #DF4B3B;
+}
+/* End favorite */
 
 /* Start Home */
 .home {
