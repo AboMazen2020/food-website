@@ -150,6 +150,7 @@ header .icon #menu-bars {
     color: var(--green);
     font-size: 18px;
     border-bottom: 2PX solid white;
+
 }
 #search-box::placeholder {
     color: white;
@@ -283,6 +284,91 @@ padding: 20px 0;
 }
 /* End login form */
 
+/* Start checkout */
+#checkout {
+    position: fixed;
+    top: 100px;
+    right: 35px;
+    width: 250px;
+    background-color: #eee;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    border: 2px solid rgba(0,0,0,.2);
+    box-shadow: var(--box-shadow);
+    z-index: 100;
+    opacity: 0%;
+
+}
+#checkout::before {
+    content: "";
+    position: absolute;
+    top: -17px;
+    right: 40px;
+    border: 15px solid #eee;
+    transform: rotate(45deg);
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+}
+#checkout.active {
+    opacity: 100;
+}
+#checkout .broduct {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 5px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid rgba(0,0,0,.2);
+}
+#checkout .broduct img {
+    width: 70px;
+    height: 70px;
+}
+#checkout .broduct h5 {
+    color: var(--green) !important;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    color: var(--black);
+}
+#checkout .broduct p {
+    font-size: 16px;
+}
+#checkout .broduct .far {
+    color: #777;
+    cursor: pointer;
+}
+#checkout .broduct .far:hover {
+    color: #DF4B3B;
+}
+#checkout h3 {
+    font-size: 22px;
+}
+#checkout a {
+    color: var(--black);
+    display: block;
+    padding: 5px 10px;
+    margin-top: 10px;
+    background-color: var(--black);
+    color: white;
+}
+#checkout a:hover {
+    border: 2px solid var(--black);
+    background: transparent;
+    color: var(--black);
+}
+#checkout #clossed {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+#checkout #clossed:hover {
+    color: #DF4B3B;
+}
+/* End checkout */
 
 /* Start Home */
 .home {
@@ -513,7 +599,7 @@ padding: 20px 0;
     background-color: var(--black);
     color: white;
     font-size: 14px;
-    border-radius: 20px 0 20px 0;
+    border-radius: 5px;
 }
 .menu .container .box .content a:hover {
     color: var(--green);

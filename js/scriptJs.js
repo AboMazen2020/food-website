@@ -46,11 +46,23 @@ let form = document.querySelector("#login-user");
     document.querySelector("#login-form").classList.remove("active");
  }
 
-
-
-
 // End login form
 
+// Start checkout
+let checkOut = document.querySelector("#cart");
+
+ checkOut.onclick = () => {
+    document.querySelector("#checkout").classList.toggle("active");
+};
+
+let clossedForm = document.querySelector("#clossed");
+
+clossedForm.onclick = () => {
+    document.querySelector("#checkout").classList.remove("active");
+};
+
+
+// End checkout
 
 // Start scroll top
 let span = document.querySelector(".up");
@@ -72,3 +84,11 @@ span.onclick = function () {
         behavior: "smooth",
     });
 };
+
+
+
+
+
+
+
+    
