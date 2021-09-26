@@ -75,24 +75,22 @@ let favorite = document.querySelector("#favorite-click");
 let closeFav = document.getElementById("close-fav");
 
     closeFav.onclick = () => {
-        document.querySelector("#favorite").classList.remove("active");
+        document.getElementById("favorite").classList.remove("active");
     }
 
 // End favorite
 
 // Start scroll top
+
 let span = document.querySelector(".up");
 
 window.onscroll = function () {
-
-     if (this.scrollY >= 1000) {
-      span.classList.add("show");
-     }else {
-         span.classList.remove("show");
-     }
-
-   // this.scrollY >= 1000 ? span.classList.add("show") : span.classList.remove("show");
-}
+    if(this.scrollY >= 500) {
+        span.classList.add("show")
+    }else {
+        span.classList.remove("show")
+    }
+};
 
 span.onclick = function () {
     window.scrollTo ({
